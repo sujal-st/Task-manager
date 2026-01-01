@@ -1,15 +1,23 @@
-const express = require("express")
+import express from "express"
+import dotenv from "dotenv"
+import connectDB from "./config/db.js";
+
+dotenv.config();
+
 const app=express();
-const PORT=5000;
+
+connectDB()
+
+app.use(express.json())
+
 
 // middleware
-app.use(express.json())
 
 // routes
 
 
-
 // server start
+const PORT=process.env.PORT || 5000
 app.listen(PORT,()=>{
     console.log("server running "+ PORT)
 })
