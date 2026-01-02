@@ -43,19 +43,19 @@ function Form({ formType }) {
             {formType==="Register" &&
             (<div className='w-full'>
                 <label className='font-bold text-[#374151]'>Name:</label><br />
-                <input type='text' name="name" value={formData.name} onChange={(e) => { handleForm(e) }} placeholder='Enter your name' className='bg-[#EBECEE] p-2 font-semibold text-[#737A85] w-full rounded-[8px]' />
+                <input type='text' name="name" required value={formData.name} onChange={(e) => { handleForm(e) }} placeholder='Enter your name' className='bg-[#EBECEE] p-2 font-semibold text-[#737A85] w-full rounded-[8px]' />
             </div>)
             }
             <div className='w-full'>
                 <label className='font-bold text-[#374151]'>Email:</label><br />
-                <input type='email' name="email" value={formData.email} onChange={(e) => { handleForm(e) }} placeholder='example@gmail.com' className='bg-[#EBECEE] p-2 font-semibold text-[#737A85] w-full rounded-[8px]' />
+                <input type='email' name="email" required value={formData.email} onChange={(e) => { handleForm(e) }} placeholder='example@gmail.com' className='bg-[#EBECEE] p-2 font-semibold text-[#737A85] w-full rounded-[8px]' />
             </div>
             <div className='w-full'>
                 <label className='font-bold text-[#374151]'>Password:</label><br />
-                <input type='password' name="password" value={formData.password} onChange={(e) => { handleForm(e) }} placeholder='Enter your password' className='bg-[#EBECEE] p-2 font-semibold text-[#737A85] w-full rounded-[8px]' />
+                <input type='password' name="password" required value={formData.password} onChange={(e) => { handleForm(e) }} placeholder='Enter your password' className='bg-[#EBECEE] p-2 font-semibold text-[#737A85] w-full rounded-[8px]' />
             </div>
-            <button className='bg-[#2563EB] text-[#F9FAFB] font-bold px-4 py-2 rounded-[8px] w-full cursor-pointer' onClick={handleSubmit}>{formType==="Register"?"Create Account":"Log In"}</button>
-            <p className='font-bold mx-auto'>{formType==="Register"?"Already have and account?":"Don’t have an account?"} <NavLink to={formType==="Register"?`/login`:`/register`} className="text-[#2563EB]">{formType==="Register"?`LogIn`:`Sign Up`}</NavLink></p>
+            <button className='bg-[#2EC2BD] text-[#F9FAFB] font-bold px-4 py-2 rounded-[8px] w-full cursor-pointer' onClick={handleSubmit}>{formType==="Register"?"Create Account":"Log In"}</button>
+            <p className='font-bold mx-auto'>{formType==="Register"?"Already have and account?":"Don’t have an account?"} <NavLink to={formType==="Register"?`/login`:`/register`} className="text-[#2EC2BD]">{formType==="Register"?`LogIn`:`Sign Up`}</NavLink></p>
         </form>
 
 
