@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from "./components/common/Navbar"
+import Footer from "./components/common/Footer"
 import GetStarted from './pages/GetStarted'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <Navbar/>
       <Outlet/>
+      <Footer/>
     </>
   )
 }

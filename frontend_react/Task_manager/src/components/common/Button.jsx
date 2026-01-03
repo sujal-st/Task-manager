@@ -4,7 +4,7 @@ function Button({ btnLabel, btnType,btnExt, onClick }) {
     const buttonStyle=(btnType==="Primary"? "bg-[#2EC2BD] text-[#F9FAFB] ": " border-2 border-[#374151]")
     const buttonExtra=(btnExt==="Primary-large"? "w-full":"")
     return (
-        <button className={`${buttonStyle} ${buttonExtra} font-bold px-4 py-2 rounded-[8px] w-[150px] cursor-pointer`} onClick={onClick}>{btnLabel}</button>
+        <button className={`${buttonStyle} ${buttonExtra} font-bold px-4 py-2 rounded-[8px] w-[150px] cursor-pointer lg:w-[200px] lg:py-4`} onClick={onClick}>{btnLabel}</button>
     )
 }
 
