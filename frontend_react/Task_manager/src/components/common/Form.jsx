@@ -8,8 +8,8 @@ function Form({ formType }) {
     const [message, setMessage] = useState("")
     const [formData, setFormData] = useState({
         name: "",
-        email:"",
-        password:""
+        email: "",
+        password: ""
     })
     const handleForm = (e) => {
         const { name, value } = e.target
@@ -35,7 +35,7 @@ function Form({ formType }) {
                 }
             const res = await fetch(url, {
                 method: "POST",
-                header: {
+                headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(payload)
@@ -43,22 +43,24 @@ function Form({ formType }) {
             if (!res.ok)
                 throw new Error("Failed to submit registr")
             const data = await res.json();
+            
 
-            if (formType === "LogIn") {
+            if (formType === "Login") {
                 localStorage.setItem("user", JSON.stringify(data.user))
                 localStorage.setItem("token", data.token)
                 window.dispatchEvent(new Event("storage"))
                 setMessage(data.message || "Login successful")
 
                 setTimeout(() => {
-                    navigate("/dashboard", { replace: true })
+                    navigate("/user/dashboard", { replace: true })
                 }, 500);
             }
-
-            setMessage(data.message || "Signup successful")
-            setTimeout(() => {
-                navigate("/login", { replace: true })
-            }, 500);
+            else{
+                setMessage(data.message || "Signup successful")
+                setTimeout(() => {
+                    navigate("/login", { replace: true })
+                }, 500);
+            }
         }
         catch (err) {
             console.error(err.message)

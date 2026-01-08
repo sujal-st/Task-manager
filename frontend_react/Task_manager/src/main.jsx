@@ -13,7 +13,6 @@ import FormPage from './FormPage.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-
       <Route path='/' element={<App />}>
         <Route index element={<Navigate to="/get-started" />} />
         <Route path="/get-started" element={<GetStarted />} />
