@@ -1,6 +1,6 @@
-import mongoose from "mongoose"
-import dotenv from "dotenv"
-import express from "express"
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+// import express from "express"
 
 dotenv.config()
 const connectDB = async()=>{
@@ -15,4 +15,4 @@ const connectDB = async()=>{
     }
 }
 
-export default connectDB;
+module.exports = connectDB;

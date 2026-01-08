@@ -47,11 +47,11 @@ function GetStarted() {
                         </NavLink>
                     </div>
                     <div className='hidden md:flex md:gap-2'>
-                        <div class="flex -space-x-3">
-                            <div class="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">A</div>
-                            <div class="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">B</div>
-                            <div class="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">C</div>
-                            <div class="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">D</div></div>
+                        <div className="flex -space-x-3">
+                            <div className="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">A</div>
+                            <div className="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">B</div>
+                            <div className="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">C</div>
+                            <div className="bg-[#2EC2BD] text-white w-10 h-10 rounded-full bg-gradient-hero border-2 border-background flex items-center justify-center text-xs font-medium text-primary-foreground">D</div></div>
                         <div className='flex flex-col justify-center'>
                             <div className='flex items-center'>
                                 <FaStar color='#f7c627' />
@@ -63,7 +63,7 @@ function GetStarted() {
                         </div>
                     </div>
                 </div>
-                <img src={hero} alt="Taskly productivity illustration with floating task cards and checkmarks" class="w-full max-w-lg mx-auto"></img>
+                <img src={hero} alt="Taskly productivity illustration with floating task cards and checkmarks" className="w-full max-w-lg mx-auto"></img>
 
             </section>
 
@@ -74,7 +74,7 @@ function GetStarted() {
 
                 <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 lg:gap-6 space-y-3'>
                     {features.map((feature) => (
-                        <FeatureCard key={feature} info={feature} />
+                        <FeatureCard key={feature.icon} info={feature} />
                     ))}
                 </div>
             </section>
@@ -85,7 +85,7 @@ function GetStarted() {
 
                 <div className='grid grid-cols-1 gap-5   md:grid-cols-3 lg:grid-cols-3 space-y-3 lg:gap-6'>
                     {steps.map((step) => (
-                        <StepCard key={step} info={step} />
+                        <StepCard key={step.icon} info={step} />
                     ))}
                 </div>
             </section>
@@ -96,7 +96,7 @@ function GetStarted() {
 
                 <div className='grid grid-cols-1 gap-5  lg:gap-6 md:grid-cols-2 lg:grid-cols-3 space-y-3'>
                     {testimonials.map((testimonial) => (
-                        <TestimonialCard key={testimonial} info={testimonial} />
+                        <TestimonialCard key={testimonial.name} info={testimonial} />
                     ))}
                 </div>
             </section>

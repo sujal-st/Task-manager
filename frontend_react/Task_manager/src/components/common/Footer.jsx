@@ -24,10 +24,10 @@ function Footer() {
                 <div className=" footerFrame grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:mx-auto">
                     {links.map((link) =>
                     (
-                        <div className=' p-5 self-center flex flex-col space-y-3'>
-                            <div key={link} className='text-[#374151] font-bold text-[1.1rem]'>{link.title}</div>
+                        <div className=' p-5 self-center flex flex-col space-y-3' key={link.title}>
+                            <div  className='text-[#374151] font-bold text-[1.1rem]'>{link.title}</div>
                             {link.l.map((l) => (
-                                <div className='text-[1rem] font-semibold text-[#5F6774]'>{l}</div>
+                                <div key={l} className='text-[1rem] font-semibold text-[#5F6774]'>{l}</div>
                             ))}
                         </div>
                     )
